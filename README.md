@@ -8,7 +8,7 @@ commandline tool for monitoring aws RDS instances
 The requirements for using `rdsmon` are relatively straight forward, however you will need:
 
 #### Installation
-Install the tool - `install rdsmon` (to install the latest version)
+Install the tool - `go get -u github.com/symonk/rdsmon-go` (to install the latest version)
 
 #### Authentication
 Typically you require an access token for a user that is configured for rds accessibility using
