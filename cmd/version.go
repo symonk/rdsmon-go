@@ -7,8 +7,8 @@ import (
 	"github.com/symonk/rdsmon-go/version"
 )
 
-// versionCmd represents the version command
-var versionCmd = &cobra.Command{
+// versionCommand represents the version command
+var versionCommand = &cobra.Command{
 	Use:   "version",
 	Short: "Prints the rdsmon-go version and exits.",
 	Run: func(cmd *cobra.Command, args []string) {
@@ -21,5 +21,5 @@ var versionCmd = &cobra.Command{
 }
 
 func init() {
-	rootCmd.AddCommand(versionCmd)
+	rootCommand.AddCommand(versionCommand)
 }

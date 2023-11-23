@@ -9,9 +9,9 @@ import (
 
 var cfgFile string
 
-// rootCmd represents the base command when called without any subcommands
-var rootCmd = &cobra.Command{
-	Use:   "generated code example",
+// rootCommand represents the base command when called without any subcommands
+var rootCommand = &cobra.Command{
+	Use:   "The root command",
 	Short: "A brief description of your application",
 	Long: `A longer description that spans multiple lines and likely contains
 examples and usage of using your application. For example:
@@ -27,7 +27,7 @@ to quickly create a Cobra application.`,
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	if err := rootCmd.Execute(); err != nil {
+	if err := rootCommand.Execute(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
