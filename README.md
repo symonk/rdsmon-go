@@ -1,18 +1,60 @@
-# rdsmon-go
+# rdsmon
+commandline tool for monitoring aws RDS instances
 
-A golang tool for monitoring RDS server side metrics
+-----
 
-## Getting started
+## Quick Start
 
-This project requires Go to be installed. On OS X with Homebrew you can just run `brew install go`.
+The requirements for using `rdsmon` are relatively straight forward, however you will need:
 
-Running it then should be as simple as:
+#### Installation
+Install the tool - `install rdsmon` (to install the latest version)
+
+#### Authentication
+Typically you require an access token for a user that is configured for rds accessibility using
+aws `IAM` roles.  Once your user has been created, you will require an `access key` and this
+should be either configured on disk, or exposed to the environment running `rdsmon`.  It is
+completely unadvised to user the `root` user and the account running the tool should have as
+minimal permissions as possible.  The `IAM` capabilities required by the tool are:
+
+ * Todo
+
+ **Important**: Properly configured IAM roles/users should be in place, tokens should be kept secure,
+ under no circumstances should you share them with anybody.  `rdsmon` utilises the same mechanisms
+ by the `boto3` aws SDK for credential detection and usage.
+
+ To better understand IAM user and policies, please refer to:
+
+ [AWS IAM user creation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_console)
+
+ [AWS Access Tokens](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
+
+
+##### Configuration on disk
+
+Once you have appropriate `IAM` roles and have created an `access_key`, these should be stored in:
+
+`~/.aws/credentials`
 
 ```console
-$ make
-$ ./bin/rdsmon-go
+[default]
+aws_access_key_id = YOUR_ACCESS_KEY
+aws_secret_access_key = YOUR_SECRET_KEY
 ```
 
-### Testing
+You may also want to add a default region to the aws configuration file, this should be set in:
 
-``make test``
+`~/.aws/config`
+
+```console
+[default]
+region=us-east-1
+```
+
+-----
+
+## Monitoring an RDS instance
+
+Todo
+
+-----
