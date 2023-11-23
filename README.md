@@ -20,8 +20,8 @@ minimal permissions as possible.  The `IAM` capabilities required by the tool ar
  * Todo
 
  **Important**: Properly configured IAM roles/users should be in place, tokens should be kept secure,
- under no circumstances should you share them with anybody.  `rdsmon` utilises the same mechanisms
- by the `boto3` aws SDK for credential detection and usage.
+ under no circumstances should you share them with anybody.  `rdsmon-go` utilises the same mechanisms
+ by the aws SDK for credential detection and usage.
 
  To better understand IAM user and policies, please refer to:
 
