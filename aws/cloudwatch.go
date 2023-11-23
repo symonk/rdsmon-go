@@ -18,5 +18,4 @@ func NewCloudWatchMonitor(config aws.Config) *CloudWatchMonitor {
 
 // Reports the available metrics for the instance
 func (c *CloudWatchMonitor) ReportAvailableMetrics() {
-
 }
