@@ -1,0 +1,6 @@
+rdsmon:
+  instance: "foo"
+  metrics:
+    - One
+    - Two
+    - Three
